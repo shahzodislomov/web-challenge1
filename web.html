@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge - Can You Find It?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+        .hint {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚩 CTF Challenge</h1>
+        <p>Welcome, hacker!</p>
+        <p>The flag is hidden somewhere on this page...</p>
+        <p>But something seems broken. 🤔</p>
+        
+        <div class="hint">
+            <strong>💡 Hint:</strong> The JavaScript is trying to do something, but it can't find what it's looking for in the rendered page.
+        </div>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // This script is trying to find something...
+        const secretElement = document.getElementsByClassName('hidden-flag')[0];
+        const findFlag = document.getElementById('WEN{v13w_s0urc3_15_y0ur_fr13nd}');
+        if (secretElement) {
+            document.getElementById('result').textContent = 'Flag found: ' + secretElement.textContent;
+        } else {
+            document.getElementById('result').textContent = 'Error: Cannot find the flag element!';
+        }
+        
+        // Maybe you should check where the flag actually is?
+        // Hint: 
+    </script>
+</body>
+</html>
